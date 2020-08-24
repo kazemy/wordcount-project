@@ -1,0 +1,18 @@
+<a href={% url 'home' %}>Star over</a>
+<h1>There are {{count}} words in your text</h1>
+<h1>Original Full Text:</h1>
+{{fulltext}}
+<br/>
+<br/>
+<h3>Displaying the full dictionary of words:</h3>
+
+{{worddictionary}}
+<br />
+<br />
+<h3>Displaying words and their counts seperately:</h3>
+
+{% for k,v in worddictionary.items %}
+    {{k}}: {{v}}
+    <br />
+{% endfor %}
+
